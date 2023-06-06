@@ -13,6 +13,16 @@ import Img7 from './images/7.JPG';
 import Img8 from './images/8.JPG';
 import Img9 from './images/9.JPG';
 import Img10 from './images/10.JPG';
+import Img11 from './images/11.JPG';
+import Img12 from './images/12.JPG';
+import Img13 from './images/13.JPG';
+import Img14 from './images/14.JPG';
+import Img15 from './images/15.JPG';
+import Img16 from './images/16.JPG';
+import Img17 from './images/17.JPG';
+import Img18 from './images/18.JPG';
+import Img19 from './images/19.JPG';
+import Img20 from './images/20.JPG';
 
 const Gallery = () => {
     const data = [
@@ -55,6 +65,46 @@ const Gallery = () => {
         {
             id: 10,
             imgSrc: Img10
+        },
+        {
+            id: 11,
+            imgSrc: Img11
+        },
+        {
+            id: 12,
+            imgSrc: Img12
+        },
+        {
+            id: 13,
+            imgSrc: Img13
+        },
+        {
+            id: 14,
+            imgSrc: Img14
+        },
+        {
+            id: 15,
+            imgSrc: Img15
+        },
+        {
+            id: 16,
+            imgSrc: Img16
+        },
+        {
+            id: 17,
+            imgSrc: Img17
+        },
+        {
+            id: 18,
+            imgSrc: Img18
+        },
+        {
+            id: 19,
+            imgSrc: Img19
+        },
+        {
+            id: 20,
+            imgSrc: Img20
         },
     ]
     const [model, setModel] = useState(false);
