@@ -1,5 +1,7 @@
 import React from 'react';
+import { useState } from 'react';
 import './gallery.css';
+
 import Img1 from './images/1.JPG';
 import Img2 from './images/2.JPG';
 import Img3 from './images/3.JPG';
@@ -8,7 +10,7 @@ import Img5 from './images/5.JPG';
 import Img6 from './images/6.JPG';
 import Img7 from './images/7.JPG';
 import Img8 from './images/8.JPG';
-import Img9 from './images/8.JPG';
+import Img9 from './images/9.JPG';
 import Img10 from './images/10.JPG';
 
 const Gallery = () => {
@@ -54,13 +56,23 @@ const Gallery = () => {
             imgSrc: Img10
         },
     ]
+    const [model, setModel] = useState(false);
+    const [tempSrc, setTempSrc] = useState('');
+
+    const openImage = (imgSrc) => {
+        setTempSrc(imgSrc);
+        setModel(true)
+    }
     return (
         <>
+            <div className={model ? 'model open' : 'model'}>
+                <img src={tempSrc} />
+            </div>
             <div className='gallery'>
                 {data.map((item, index) => {
                     return (
-                        <div className='images' key={index}>
-                            <img src={item.imgSrc} style={{width: '100%'}}/>
+                        <div className='images' key={index} onClick={() => openImage(item.imgSrc)}>
+                            <img src={item.imgSrc} style={{ width: '100%' }} />
                         </div>
                     )
                 })}
